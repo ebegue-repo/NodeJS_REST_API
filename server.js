@@ -51,10 +51,10 @@ app.get('/:id', function(request, response){
 /********************************************************/
 /* UPDATE USER                                          */ 
 /********************************************************/
-app.put('/:id', function(request, response){
+app.put('/:id/:name', function(request, response){
 	fs.readFile("./users.json", 'utf8', function(err, data){
 		data = JSON.parse(data);
-		data["user" + request.params.id]["name"] = "Jhon";
+		data["user" + request.params.id]["name"] = request.params.name;
 		response.end(JSON.stringify(data));
 	});
 });
