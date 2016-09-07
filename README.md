@@ -1,14 +1,18 @@
 # NodeJS_REST_API
 
-- REST API which offers CRUD operations over a group of users.
+- Description: REST API which offers CRUD operations over a group of users.
 
-- It´s needed to install the "Express" framework:
+- Installing all the dependencies written in the package.json file:
 
-  npm install express --save
+	npm install
 
+- Starting the server:
+
+	node server.js
+	
 - Calling the CRUD operations using CURL:
 
-	* CREATE:   curl -X POST http://localhost:8081
+	* CREATE:   curl -X POST http://localhost:8081/
 	* RETRIEVE: curl -X GET http://localhost:8081/2
 	* UPDATE:   curl -X PUT http://localhost:8081/2/Lucas
 	* DELETE:   curl -X DELETE http://localhost:8081/1

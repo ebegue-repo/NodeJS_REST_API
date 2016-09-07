@@ -1,0 +1,23 @@
+{
+  "name": "nodejs_rest_api",
+  "version": "1.0.0",
+  "description": "REST API which offers CRUD operation over a group of users",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebegue-repo/NodeJS_REST_API.git"
+  },
+  "author": "Eduardo Begué",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ebegue-repo/NodeJS_REST_API/issues"
+  },
+  "homepage": "https://github.com/ebegue-repo/NodeJS_REST_API#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
