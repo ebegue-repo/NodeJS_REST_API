@@ -12,7 +12,7 @@
 	
 - Calling the CRUD operations using CURL:
 
-	* CREATE:   curl -X POST http://localhost:8081/
-	* RETRIEVE: curl -X GET http://localhost:8081/2
-	* UPDATE:   curl -X PUT http://localhost:8081/2/Lucas
-	* DELETE:   curl -X DELETE http://localhost:8081/1
+	* CREATE:   curl -X POST http://localhost:8081/users/
+	* RETRIEVE: curl -X GET http://localhost:8081/users/2
+	* UPDATE:   curl -X PUT http://localhost:8081/users/2/Lucas
+	* DELETE:   curl -X DELETE http://localhost:8081/users/1

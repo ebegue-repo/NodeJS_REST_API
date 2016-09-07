@@ -19,7 +19,7 @@ var server = app.listen(8081, function(){
 /********************************************************/
 /* CREATE USER                                          */ 
 /********************************************************/
-app.post('', function(request, response){
+app.post('/users', function(request, response){
 	// Example user
 	var user = {
 	   "user4" : {
@@ -40,7 +40,7 @@ app.post('', function(request, response){
 /********************************************************/
 /* RETRIEVE USER                                        */ 
 /********************************************************/
-app.get('/:id', function(request, response){
+app.get('/users/:id', function(request, response){
 	fs.readFile("./users.json", 'utf8', function(err, data){
 		var users = JSON.parse(data);
 		var user = users["user" + request.params.id];
@@ -51,7 +51,7 @@ app.get('/:id', function(request, response){
 /********************************************************/
 /* UPDATE USER                                          */ 
 /********************************************************/
-app.put('/:id/:name', function(request, response){
+app.put('/users/:id/:name', function(request, response){
 	fs.readFile("./users.json", 'utf8', function(err, data){
 		data = JSON.parse(data);
 		data["user" + request.params.id]["name"] = request.params.name;
@@ -62,7 +62,7 @@ app.put('/:id/:name', function(request, response){
 /********************************************************/
 /* DELETE USER                                          */ 
 /********************************************************/
-app.delete('/:id', function(request, response){
+app.delete('/users/:id', function(request, response){
 	fs.readFile("./users.json", 'utf8', function(err, data){
 		var data = JSON.parse(data);
 		delete data["user" + request.params.id];
